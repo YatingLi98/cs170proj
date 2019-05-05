@@ -59,3 +59,4 @@ def update(res, confidence, prob, dictionary):
         score = sum([confidence[s] for s, res in dictionary.items() if res is True]) +\
                 sum([-confidence[s] for s, res in dictionary.items() if res is False])
         prob.update(v, score)
+
