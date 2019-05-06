@@ -310,3 +310,4 @@ def update(res, confidence, prob, dictionary, vertex):
                 sum([-confidence[s] for s, res in dictionary[v].items() if res is False])
 
         prob.update(v, score)
+
