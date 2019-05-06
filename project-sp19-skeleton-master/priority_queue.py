@@ -21,12 +21,15 @@ class PriorityQueue:
         self.contain.add(item)
 
     def pop(self):
-        (_, _, item) = heapq.heappop(self.heap)
+        (priority, _, item) = heapq.heappop(self.heap)
         self.contain.remove(item)
-        return item
+        return item, -priority
 
     def key_set(self):
         return self.contain
+
+    def size(self):
+        return len(self.heap)
 
     def isEmpty(self):
         return len(self.heap) == 0
